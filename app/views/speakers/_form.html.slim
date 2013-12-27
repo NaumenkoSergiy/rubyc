@@ -1,0 +1,27 @@
+- speaker ||= @speaker || Speaker.new
+.well
+  = form_for speaker, html: { role: 'form', class: 'form-horizontal' } do |f|
+    .form-group
+      = f.label :firstname, "First name", class: ['col-sm-2', 'control-label']
+      .col-sm-10= f.text_field :firstname, class: 'form-control', placeholder: 'First name'
+
+    .form-group
+      = f.label :lastname, "Last name", class: ['col-sm-2', 'control-label']
+      .col-sm-10= f.text_field :lastname, class: 'form-control', placeholder: 'Last name'
+
+    .form-group
+      = f.label :email, "Email address", class: ['col-sm-2', 'control-label']
+      .col-sm-10= f.email_field :email, class: 'form-control', placeholder: 'Email address'
+
+    .form-group
+      = f.label :theme, "Subject", class: ['col-sm-2', 'control-label']
+      .col-sm-10= f.text_field :theme, class: 'form-control', placeholder: 'Subject'
+
+    .form-group
+      = f.label :summary, "Summary", class: ['col-sm-2', 'control-label']
+      .col-sm-10= f.text_area :summary, class: 'form-control', placeholder: 'Summary'
+
+    hr
+    .form-group
+      .col-sm-offset-2.col-sm-10
+        = f.submit 'Become a speaker', class: 'btn btn-success'
