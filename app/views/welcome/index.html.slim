@@ -14,40 +14,13 @@
             li= link_to 'Agenda',   '#agenda'
             li= link_to 'Sponsors', '#sponsors'
 
-    section#overview
-      .jumbotron
-        h1 April 19-20th 2014, Kiev, Ukraine
-        p We are proud to present you coming Ruby, Ruby on Rails and satellite technologies.
-        p Make friends, learn new, get inspired, and have fun!
-        = link_to 'Purchase tickets', '#tickets', class: 'btn btn-lg btn-success btn-block'
-
-    section#speakers
-      h1 Speakers
-      = render @speakers
-
-    section#become_speaker
-      h1 Want to give a speech? Fill the form below!
-      = render partial: 'speakers/form'
-
-    section#venue
-      h1 Venue
-      p Lorem Ipsum
-
-    section#hotels
-      h1 Hotels
-      p Lorem Ipsum
-
-    section#agenda
-      h1 Agenda
-      p Agenda Lorem Ipsum
-
-    section#tickets
-      h1 Tickets
-      <script type="text/javascript" src="https://www.amiando.com/resources/js/amiandoExport.js"></script><iframe src="https://www.amiando.com/XIUUCHD.html?viewType=iframe&distributionChannel=CHANNEL_IFRAME&panelId=2215564&useDefaults=false&resizeIFrame=true" frameborder="0" width="650px" height="450px" name="_amiandoIFrame22155646vyfUdj1" id="_amiandoIFrame22155646vyfUdj1"><p>This page requires frame support. Please use a frame compatible browser to see the amiando ticket sales widget.</p><p> Try out the <a href="http://www.amiando.com/">online event registration system</a> from amiando.</p></iframe><p style="text-align: left; font-size:10px;"><a href="http://www.amiando.com" target="_blank" alt="conference - Online Event Management" title="conference - Online Event Management" >conference - Online Event Management</a> with the ticketing solution amiando</p>
-
-    section#sponsors
-      h1 Sponsors
-      p Our Sponsors list
-      p Interested in sponsoring? Email us at rubyc@svitla.com
+.container
+  section#overview= render partial: 'overview'
+  section#speakers= render partial: 'speakers'
+  section#venue=    render partial: 'venue'
+  section#hotels=   render partial: 'hotels'
+  section#agenda=   render partial: 'agenda'
+  section#tickets=  render partial: 'tickets'
+  section#sponsors= render partial: 'sponsors'
 
 

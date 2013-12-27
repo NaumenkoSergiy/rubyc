@@ -58,6 +58,7 @@ GEM
       i18n (~> 0.5)
     font-awesome-rails (4.0.3.0)
       railties (>= 3.2, < 5.0)
+    gmaps4rails (2.1.1)
     haml (4.0.4)
       tilt
     hike (1.2.3)
@@ -204,6 +205,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   faker
+  gmaps4rails
   jbuilder (~> 1.2)
   jquery-rails
   rails (= 4.0.2)

@@ -12,3 +12,29 @@
  *= require_tree .
  */
 @import "bootstrap";
+
+body {
+  margin-top: 100px;
+}
+
+section {
+  border-bottom: 1px solid $gray-lighter;
+  h1 {
+    @extend .text-center;
+  }
+}
+
+.sponsors {
+  a {
+    margin: 10px;
+    img {
+      max-width: 120px;
+    }
+  }
+}
+
+.footer {
+  margin-top: 1em;
+  text-align: center;
+  font-size: $font-size-small;
+}

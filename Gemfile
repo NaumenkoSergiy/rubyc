@@ -34,12 +34,12 @@ gem 'devise'
 gem 'simple_form'
 gem 'cancan'
 gem 'rails_admin'
+gem 'gmaps4rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
-
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'factory_girl_rails'
