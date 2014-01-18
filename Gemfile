@@ -35,6 +35,8 @@ gem 'simple_form'
 gem 'cancan'
 gem 'rails_admin'
 gem 'gmaps4rails'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

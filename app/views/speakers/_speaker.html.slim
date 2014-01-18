@@ -3,3 +3,5 @@
   h4.theme= speaker.theme
   p.about= speaker.about
   p.summary= speaker.summary
+  - if speaker.foto && speaker.foto.image
+    p.foto= image_tag speaker.foto.image.url(:thumb)
