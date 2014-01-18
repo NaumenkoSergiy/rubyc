@@ -114,6 +114,9 @@ GEM
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
     pg (0.17.1)
+    pickle (0.4.11)
+      cucumber (>= 0.8)
+      rake
     polyglot (0.3.3)
     rack (1.5.2)
     rack-pjax (0.7.0)
@@ -248,6 +251,7 @@ DEPENDENCIES
   jquery-rails
   mini_magick
   pg
+  pickle
   rails (= 4.0.2)
   rails_12factor
   rails_admin

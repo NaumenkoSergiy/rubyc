@@ -9,6 +9,6 @@ class SpeakersController < ApplicationController
   private
     def speaker_params
       # params.require(:speaker).permit(:firstname, :lastname, :email, :theme, :summary, :foto)
-      params.fetch(:speaker, {}).permit(:firstname, :lastname, :email, :theme, :summary, :foto_attributes)
+      params.fetch(:speaker, {}).permit(:firstname, :lastname, :email, :theme, :summary, :foto_attributes => [:image])
     end
 end
