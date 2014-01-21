@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @speakers = Speaker.all
+    @speakers = Speaker.approved.all
   end
 end

@@ -2,8 +2,14 @@ class SpeakersController < ApplicationController
   respond_to :html
 
   def create
-    @speaker = Speaker.create(speaker_params)
-    respond_with @speaker
+    @speaker = Speaker.new(speaker_params)
+
+    if @speaker.save
+      redirect_to :root, flash: { notice: "Thank you for you registration! We will contact you soon!" }
+    else
+      render :new, status: :unprocessable_entity
+    end
+    # respond_with @speaker
   end
 
   private
