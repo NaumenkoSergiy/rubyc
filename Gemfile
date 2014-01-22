@@ -35,6 +35,8 @@ gem 'simple_form'
 gem 'cancan'
 gem 'rails_admin'
 gem 'gmaps4rails'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -45,10 +47,14 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'simplecov'
+  gem 'launchy'
 end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem 'pickle'
 end
 
 group :production do

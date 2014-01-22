@@ -1,6 +1,8 @@
 - speaker ||= @speaker || Speaker.new
+- speaker.foto ||= speaker.build_foto
 .well
   = form_for speaker, html: { role: 'form', class: 'form-horizontal' } do |f|
+    / = debug f.object.errors
     .form-group
       = f.label :firstname, "First name", class: ['col-sm-2', 'control-label']
       .col-sm-10= f.text_field :firstname, class: 'form-control', placeholder: 'First name'
@@ -8,6 +10,10 @@
     .form-group
       = f.label :lastname, "Last name", class: ['col-sm-2', 'control-label']
       .col-sm-10= f.text_field :lastname, class: 'form-control', placeholder: 'Last name'
+
+    / .form-group
+    /   = f.label :foto, "Foto", class: ['col-sm-2', 'control-label']
+    /   .col-sm-10= f.file_field :foto, class: 'form-control'
 
     .form-group
       = f.label :email, "Email address", class: ['col-sm-2', 'control-label']
@@ -20,6 +26,11 @@
     .form-group
       = f.label :summary, "Summary", class: ['col-sm-2', 'control-label']
       .col-sm-10= f.text_area :summary, class: 'form-control', placeholder: 'Summary'
+
+    .form-group
+      = f.fields_for :foto do |ff|
+        = ff.label :image, "Foto", class: ['col-sm-2', 'control-label']
+        .col-sm-10= ff.file_field :image, class: 'form-control'
 
     hr
     .form-group

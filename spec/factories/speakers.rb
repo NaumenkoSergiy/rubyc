@@ -7,5 +7,9 @@ FactoryGirl.define do
     email     { Faker::Internet.email }
     theme     { Faker::Lorem.sentence }
     summary   { Faker::Lorem.paragraph }
+
+    after(:create) do |speaker, evaluate|
+      speaker.foto = FactoryGirl.create :foto
+    end
   end
 end

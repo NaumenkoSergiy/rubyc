@@ -1,0 +1,16 @@
+.navbar-wrapper#header
+  .container
+    .navbar.navbar-static-top(role="navigation")
+      .container
+        .navbar-header
+          / = link_to 'Svitla Ruby Conference', :root, class: 'navbar-brand'
+          = link_to image_tag('logo.png'), :root
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li= link_to 'Overview', '#overview'
+            li= link_to 'Speakers', '#speakers'
+            li= link_to 'Tickets',  '#tickets'
+            li= link_to 'Venue',    '#venue'
+            li= link_to 'Hotels',   '#hotels'
+            li= link_to 'Agenda',   '#agenda'
+            li= link_to 'Sponsors', '#sponsors'
