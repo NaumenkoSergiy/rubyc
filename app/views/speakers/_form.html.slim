@@ -2,7 +2,7 @@
 - speaker.foto ||= speaker.build_foto
 .well
   = form_for speaker, html: { role: 'form', class: 'form-horizontal' } do |f|
-    = debug f.object.errors
+    / = debug f.object.errors
     .form-group
       = f.label :firstname, "First name", class: ['col-sm-2', 'control-label']
       .col-sm-10= f.text_field :firstname, class: 'form-control', placeholder: 'First name'

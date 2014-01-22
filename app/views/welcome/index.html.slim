@@ -1,22 +1,8 @@
-.navbar-wrapper
-  .container
-    .navbar.navbar-inverse.navbar-static-top(role="navigation")
-      .container
-        .navbar-header
-          = link_to 'Svitla Ruby Conference', :root, class: 'navbar-brand'
-        .navbar-collapse.collapse
-          ul.nav.navbar-nav
-            li= link_to 'Overview', '#overview'
-            li= link_to 'Speakers', '#speakers'
-            li= link_to 'Tickets',  '#tickets'
-            li= link_to 'Venue',    '#venue'
-            li= link_to 'Hotels',   '#hotels'
-            li= link_to 'Agenda',   '#agenda'
-            li= link_to 'Sponsors', '#sponsors'
-
+section#overview
+  .container= render partial: 'overview'
+section#speakers
+  .container= render partial: 'speakers'
 .container
-  section#overview= render partial: 'overview'
-  section#speakers= render partial: 'speakers'
   section#venue=    render partial: 'venue'
   section#hotels=   render partial: 'hotels'
   section#agenda=   render partial: 'agenda'
