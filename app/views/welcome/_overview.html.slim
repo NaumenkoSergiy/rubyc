@@ -1,9 +1,17 @@
 h1 Svitla Ruby Conference
 #when-where
   #when April 19-20th 2014
+  / span.glyphicon.glyphicon-time
+  / span
   #where= link_to 'Kiev, Ukraine', '#venue'
-p We are proud to present you coming Ruby, Ruby on Rails and satellite technologies.
-p Make friends, learn new, get inspired, and have fun!
+  / span.glyphicon.glyphicon-map-marker
+#announce
+  p We are proud to present you coming Ruby, Ruby on Rails and satellite technologies.
+  p Make friends, learn new, get inspired, and have fun!
 #buy
-  = link_to 'Buy ticket', '#tickets', class: 'btn btn-lg btn-success'
-  p Your ticket includes: access to all sessions during the conference, breakfasts, lunches and coffee breaks and official T-shirt.
+  p
+    = link_to '#tickets', class: 'btn btn-lg btn-success' do
+      = image_tag 'ticket.png'
+      span.caption Buy ticket
+  p.price USD 50
+  p.description Your ticket includes: access to all sessions during the conference, breakfasts, lunches and coffee breaks and official T-shirt.
