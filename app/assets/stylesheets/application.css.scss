@@ -56,7 +56,7 @@ section {
     font-weight: bold;
     font-size: 2.5em;
     border-bottom: 1px dashed #faa870;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     padding-top: 10px;
   }
 }
@@ -315,6 +315,68 @@ section {
     }
   }
   padding-bottom: 50px;
+}
+
+#agenda {
+  padding-bottom: 20px;
+  p.description {
+    @extend .text-center;
+    color: $gray-light;
+  }
+
+  .subject {
+    font-weight: bold;
+  }
+
+  .when,
+  .subject,
+  .speaker {
+    display: inline;
+    direction: ltr;
+  }
+
+  h3 {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-top: 0px;
+    margin-bottom: 18px;
+  }
+
+  .session {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+
+  .day1 {
+    h3 {
+      text-align: right
+    }
+    .session {
+      direction: rtl;
+
+      .when {
+        padding-left: 25px;
+        background: url(image-path('left.png')) no-repeat left center;
+      }
+      .subject { margin: 0 15px }
+    }
+    border-right: 1px solid $gray-lighter;
+  }
+
+  .day2 {
+    h3 {
+      text-align: left;
+    }
+    .session {
+      direction: ltr;
+
+      .when {
+        padding-right: 25px;
+        background: url(image-path('right.png')) no-repeat right center;
+      }
+      .subject { margin: 0 15px }
+    }
+  }
 }
 
 #footer {
