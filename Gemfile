@@ -27,16 +27,17 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem "slim-rails"
-gem 'bootstrap-sass', '~> 3.0.3.0'
 
-gem 'devise'
-gem 'simple_form'
+gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'cancan'
-gem 'rails_admin'
-gem 'gmaps4rails'
 gem 'carrierwave'
+gem 'devise'
+gem 'gmaps4rails'
 gem 'mini_magick'
+gem 'rails_admin'
+gem 'simple_form'
+gem 'slim-rails'
+gem 'underscore-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

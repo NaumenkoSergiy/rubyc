@@ -1,28 +1,52 @@
 h2 Venue address
 .container
-  .col-sm-5.text-right
+  .col-md-5.col-xs-12
     .address
-      .title  Svitla Ceremony Hall
-      .street Nikolsko-Slobodska, 2b
-      .city Kiev, Ukraine
+      = link_to "https://maps.google.com/?q=Mykilsko-Slobidska St, 2Б, Kiev, Ukraine", target: '_blank' do
+        .title  Svitla Ceremony Hall
+        .street Nikolsko-Slobidska, 2b
+        .city Kiev, Ukraine
 
-  .col-sm-7#map
-    p= image_tag 'map.png'
-    javascript:
-      handler = Gmaps.build('Google');
-      handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-        markers = handler.addMarkers([
-          {
-            "lat": 0,
-            "lng": 0,
-            "picture": {
-              "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
-              "width":  36,
-              "height": 36
-            },
-            "infowindow": "hello!"
-          }
-        ]);
-        handler.bounds.extendWith(markers);
-        handler.fitMapToBounds();
-      });
+  .col-md-7.col-xs-12
+    #map-canvas
+    / p= image_tag 'map.png'
+  / javascript:
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers([
+        {
+          "lat": 50.45408432,
+          "lng": 30.59213219,
+          "picture": {
+            "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
+            "width":  36,
+            "height": 36
+          },
+          "infowindow": "Svitla Ceremony Hall"
+        }
+      ]);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    });
+
+coffee:
+  map = undefined
+  markers = []
+
+  addMarker = (map, location) ->
+    marker = new google.maps.Marker(
+      position: location
+      map: map
+    )
+    markers.push marker
+
+
+  initialize = ->
+    mapOptions =
+      center: new google.maps.LatLng(50.45408432, 30.59213219)
+      zoom: 12
+
+    map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions)
+    addMarker(map, new google.maps.LatLng(50.45408432, 30.59213219))
+
+  google.maps.event.addDomListener window, "load", initialize
