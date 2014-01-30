@@ -382,10 +382,23 @@ section {
   }
 }
 
-#map-canvas {
-  height: 500px;
-  background: orange;
+#venue {
+  @media(max-width: $screen-md){
+    #map-canvas {
+      height: 300px;
+    }
+  }
+
+  @media(min-width: $screen-md){
+    .address {
+      text-align: right;
+    }
+    #map-canvas {
+      height: 500px;
+    }
+  }
 }
+
 
 #footer {
   background: #6c6c6c;
