@@ -184,15 +184,11 @@ section {
 
     p.description {
       font-size: 0.5em;
-      color: #aaa5a5;
+      // color: #aaa5a5;
       width: 33.333333%;
       margin: 0px auto;
     }
   }
-}
-
-#when-where {
-  margin-left: 200px;
 }
 
 #when,
@@ -205,14 +201,31 @@ section {
 #when {
   background: url(image-path('when.png')) no-repeat left center;
   padding-left: 40px;
-  padding-right: 40px;
-  border-right: 1px dotted #b4b4b4;
 }
 
 #where {
   background: url(image-path('where.png')) no-repeat left center;
   padding-left: 30px;
-  margin-left: 40px;
+}
+
+@media(max-width: $screen-sm){
+  .when-wrapper,
+  .where-wrapper {
+    text-align: center;
+  }
+}
+
+@media(min-width: $screen-sm){
+  .when-wrapper {
+    border-right: 1px dotted silver;
+    text-align: right;
+  }
+
+  #where {
+  }
+
+  #when {
+  }
 }
 
 // Speakers
