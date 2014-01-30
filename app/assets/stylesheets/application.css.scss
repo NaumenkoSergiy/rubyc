@@ -20,6 +20,10 @@ body {
   padding-bottom: 0;
 }
 
+section {
+  padding-bottom: 20px;
+}
+
 // NAVBAR
 .navbar-wrapper {
   position: absolute;
@@ -252,7 +256,7 @@ section {
   .hotels-table {
     border: 3px solid white;
     border-radius: 5px;
-    padding: 0px 50px 20px 50px;
+    padding: 0px 50px;
     margin-top: 20px;
   }
 
@@ -318,7 +322,6 @@ section {
 }
 
 #agenda {
-  padding-bottom: 20px;
   p.description {
     @extend .text-center;
     color: $gray-light;
