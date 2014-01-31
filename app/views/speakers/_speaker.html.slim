@@ -1,4 +1,4 @@
-.speaker(id="speaker_#{speaker.id}")
+.speaker.col-xs-12.col-md-6(id="speaker_#{speaker.id}")
   - if speaker.foto && speaker.foto.image
     p.foto= image_tag speaker.foto.image.url(:thumb)
   h3.name= speaker.name
@@ -6,4 +6,3 @@
   p.summary= speaker.summary
   - if speaker.about
     p.about= speaker.about
-  .clearfix
