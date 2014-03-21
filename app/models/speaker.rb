@@ -1,6 +1,6 @@
 class Speaker < ActiveRecord::Base
   # Validations
-  validates :firstname, :lastname, :email, :theme, :summary, presence: true
+  validates :firstname, :lastname, :email, :theme, presence: true
 
   # Associations
   has_one :foto, as: :album
