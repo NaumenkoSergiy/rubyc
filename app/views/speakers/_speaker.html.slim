@@ -4,11 +4,6 @@
   h3.name= speaker.name
   h4.theme= speaker.theme
   - unless speaker.summary.blank?
-      p.summary
-        strong Title:&nbsp;
-        == speaker.summary
-
+    p.summary== speaker.summary
   - unless speaker.about.blank?
-    p.about
-      strong About speaker:&nbsp;
-      == speaker.about
+    p.about== speaker.about
