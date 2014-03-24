@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @speakers = Speaker.approved.all
+    @speakers = Speaker.approved.order(:position)
   end
 end

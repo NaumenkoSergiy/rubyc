@@ -39,6 +39,7 @@ gem 'rails_admin'
 gem 'simple_form'
 gem 'slim-rails'
 gem 'underscore-rails'
+gem 'acts_as_list'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

@@ -11,6 +11,10 @@ class Speaker < ActiveRecord::Base
   # Scopes
   scope :approved, -> { where(approved: true) }
 
+  acts_as_list
+
+  scope :sorted, ->{ order(:position) }
+
   def name
     "#{firstname} #{lastname}"
   end
