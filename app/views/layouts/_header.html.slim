@@ -3,8 +3,9 @@
     .navbar.navbar-static-top(role="navigation")
       .container
         .navbar-header
-          / = link_to 'Svitla Ruby Conference', :root, class: 'navbar-brand'
-          = link_to image_tag('logo.png'), :root
+          ul.nav.navbar-nav
+            li = link_to 'RubyC 2014', :root, class: 'navbar-brand'
+          / = link_to image_tag('logo.png'), :root
         .navbar-collapse.collapse
           ul.nav.navbar-nav
             li= link_to 'Overview', '#overview'
