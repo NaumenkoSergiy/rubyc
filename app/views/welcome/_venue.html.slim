@@ -2,10 +2,11 @@ h2 Venue address
 .container
   .col-md-5.col-xs-12
     .address
-      = link_to "https://maps.google.com/?q=Mykilsko-Slobidska St, 2Б, Kiev, Ukraine", target: '_blank' do
-        .title  Svitla Ceremony Hall
-        .street Nikolsko-Slobidska, 2b
+      = link_to "https://maps.google.com/?q=Smolenska St, 31/33, Kiev, Ukraine", target: '_blank' do
+        .title  Business Center "Incom"
+        .street Smolenska St, 31/33
         .city Kiev, Ukraine
+      = image_tag ('bc-incom.jpg')
 
   .col-md-7.col-xs-12
     #map-canvas
@@ -23,12 +24,14 @@ coffee:
 
 
   initialize = ->
+    coords = new google.maps.LatLng(50.451128, 30.445379000000003)
+
     mapOptions =
-      center: new google.maps.LatLng(50.45408432, 30.59213219)
+      center: coords
       zoom: 12
 
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions)
-    addMarker(map, new google.maps.LatLng(50.45408432, 30.59213219))
+    addMarker(map, coords)
 
   google.maps.event.addDomListener window, "load", initialize
 
