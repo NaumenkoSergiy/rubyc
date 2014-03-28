@@ -5,8 +5,4 @@ class ApplicationController < ActionController::Base
 
   http_basic_authenticate_with :name => "admin", :password => "Crjkzhbz!" if Rails.env.production?
 
-  def show
-    @speaker = Speaker.find(params[:id])
-  end
-
 end
