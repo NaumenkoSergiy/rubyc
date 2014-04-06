@@ -1,20 +1,21 @@
-.navbar-wrapper#header
+.navbar.navbar-default.navbar-fixed-top#navbar-header(role="navigation")
   .container
-    .navbar.navbar-static-top(role="navigation")
-      .container
-        .navbar-header
-          ul.nav.navbar-nav
-            li = link_to 'RubyC 2014', :root, class: 'navbar-brand'
-          / = link_to image_tag('logo.png'), :root
-        .navbar-collapse.collapse
-          ul.nav.navbar-nav
-            li= link_to 'Overview', '#overview'
-            li= link_to 'Speakers', '#speakers'
-            li= link_to 'Tickets',  '#tickets'
-            li= link_to 'Venue',    '#venue'
-            li= link_to 'Hotels',   '#hotels'
-            li= link_to 'Agenda',   '#agenda'
-            li= link_to 'Sponsors', '#sponsors'
-            li.social
-              a(href='https://twitter.com/rubyc_eu'): i.fa.fa-2x.fa-twitter
-              a(href='https://www.facebook.com/RubyC.eu'): i.fa.fa-2x.fa-facebook
+    .navbar-header
+      button(type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='/') RubyC 2014
+    .navbar-collapse.collapse
+      ul.nav.navbar-nav
+        li= link_to 'Overview', '#overview'
+        li= link_to 'Speakers', '#speakers'
+        li= link_to 'Tickets',  '#tickets'
+        li= link_to 'Venue',    '#venue'
+        li= link_to 'Hotels',   '#hotels'
+        li= link_to 'Agenda',   '#agenda'
+        li= link_to 'Sponsors', '#sponsors'
+      ul.nav.navbar-nav.navbar-right.social
+        li: a(href='https://twitter.com/rubyc_eu'): i.fa.fa-2x.fa-twitter
+        li: a(href='https://www.facebook.com/RubyC.eu'): i.fa.fa-2x.fa-facebook

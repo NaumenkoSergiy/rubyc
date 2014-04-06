@@ -17,7 +17,7 @@
 $orange-light: #faa870;
 
 body {
-  margin-top: 72px;
+  margin-top: 51px;
   padding-bottom: 0;
 }
 
@@ -25,25 +25,32 @@ section {
   padding-bottom: 20px;
 }
 
-// NAVBAR
-.navbar-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 20;
+#navbar-header {
+  margin-bottom: 0;
 }
 
-/* Flip around the padding for proper display in narrow viewports */
-.navbar-wrapper .container {
-  padding-left: 0;
-  padding-right: 0;
-}
-.navbar-wrapper .navbar {
-  padding-left: 15px;
-  padding-right: 15px;
+ul.navbar-right.social li {
+  a {
+    margin-top: -3px;
+    margin-bottom: -5px;
+  }
 }
 
+@media(max-width: $screen-sm){
+  #navbar-header {
+    .navbar-nav li a {
+      padding: 5px;
+      line-height: 2em;
+    }
+
+    .navbar-right li {
+      display: inline;
+      a{
+        display: inline;
+      }
+    }
+  }
+}
 
 section {
 
@@ -94,67 +101,6 @@ section {
   }
 }
 
-// Footer
-.footer {
-  margin-top: 1em;
-  text-align: center;
-  font-size: $font-size-small;
-}
-
-// Header
-#header {
-  margin-top: 10px;
-  .navbar {
-    a {
-      color: #b4b4b4;
-      font-weight: bold;
-      padding: 5px 30px 0px 30px;
-
-      &:hover {
-        color: $orange-light;
-        background: none;
-      }
-
-      &:active {
-        color: orange;
-      }
-    }
-
-    li {
-      padding: 15px 0px;
-    }
-
-    li:not(:last-child) {
-      a {
-        border-right: 1px dotted #ffdbbb;
-      }
-    }
-
-    li.social {
-      padding-left: 15px;
-      
-      a {
-        display: inline;
-        padding: 0;
-        color: red;
-
-        i {
-          width: 30px;
-          text-align: center;
-        }
-
-        i.fa-facebook {
-          color: #374F8A;
-        }
-
-        i.fa-twitter {
-          color: #55ACEE;
-        }
-      }
-    }
-  }
-  // border-bottom: 1px solid #ffdbbb;
-}
 
 // Overview section
 #overview {
@@ -432,14 +378,14 @@ section {
       text-align: center;
       margin-bottom: 1em;
     }
-    
+
     @media(min-width: $screen-md){
       text-align: right
     }
   }
 }
 
-
+// Footer
 #footer {
   background: #6c6c6c;
   border-top: 7px solid #868686;
@@ -448,4 +394,19 @@ section {
   a {
     color: $orange-light;
   }
+
+  .footer {
+    margin-top: 1em;
+    text-align: center;
+    font-size: $font-size-small;
+  }
+}
+
+// Icon colors
+i.fa-facebook {
+  color: #374F8A;
+}
+
+i.fa-twitter {
+  color: #55ACEE;
 }
