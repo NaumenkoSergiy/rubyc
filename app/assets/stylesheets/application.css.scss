@@ -96,12 +96,17 @@ section {
 
     img {
       background: white;
-      max-width: 120px;
+      max-height: 120px;
     }
 
     &.rabota img {
-      max-width: 275px;
+      max-height: 60px;
     }
+
+    &.itukraine img {
+      max-height: 90px;
+    }
+
   }
 }
 
