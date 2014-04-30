@@ -15,6 +15,7 @@
 @import "font-awesome";
 
 $orange-light: #faa870;
+$orange: #ed9243;
 
 body {
   margin-top: 51px;
@@ -106,7 +107,7 @@ section {
 #overview {
   font-size: 1.5em;
   border-top: 2px solid #ffdbbb;
-  background: url(image-path('overview-bg.jpg')) repeat-x center top;
+  background: $orange url(image-path('overview-bg.jpg')) repeat-x center top;
   h1 {
     font-weight: bold;
     color: #f8841c;
@@ -121,7 +122,7 @@ section {
     @media(min-width: $screen-lg){ font-size: 4em }
   }
 
-  height: 609px;
+  // height: 609px;
   padding-bottom: 200px;
 
   #announce {
@@ -198,8 +199,8 @@ section {
 }
 
 // Speakers
-#speakers {
-  background: #ec9241;
+#speakers, #blog {
+  background: $orange;
 
   h1,
   h2,
@@ -409,4 +410,28 @@ i.fa-facebook {
 
 i.fa-twitter {
   color: #55ACEE;
+}
+
+// Blog announcements
+
+.row#blog {
+  h2 { color: white; }
+  ul.announce {
+    font-size: 120%;
+    list-style: none;
+    margin: auto;
+
+    li {
+      .date {
+        font-size: 85%;
+        color: $gray;
+        margin-right: 1em;
+      }
+      a { color: $text-color }
+    }
+  }
+
+  @media(min-width: $screen-md){
+    ul.announce { width: 66% }
+  }
 }

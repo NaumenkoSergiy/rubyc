@@ -1,0 +1,7 @@
+.row#blog
+  h2 Latest updates
+  ul.announce
+    - posts.each do |post|
+      li
+        span.date= post.created_at.strftime "%d %b, %Y"
+        span.link= link_to post.title, post

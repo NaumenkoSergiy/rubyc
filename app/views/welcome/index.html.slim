@@ -1,4 +1,5 @@
 section#overview: .container= render partial: 'overview'
+section#blog:     .container= render partial: 'posts/announce', object: @posts, as: :posts
 section#speakers: .container= render partial: 'speakers'
 section#become:   .container= render partial: 'become'
 section#venue:    .container= render partial: 'venue'
