@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140430071511) do
+ActiveRecord::Schema.define(version: 20140430113456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,22 @@ ActiveRecord::Schema.define(version: 20140430071511) do
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
+
+  create_table "ckeditor_assets", force: true do |t|
+    t.string   "data_file_name",               null: false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.integer  "assetable_id"
+    t.string   "assetable_type",    limit: 30
+    t.string   "type",              limit: 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
+  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
   create_table "fotos", force: true do |t|
     t.integer  "album_id"
@@ -64,6 +80,19 @@ ActiveRecord::Schema.define(version: 20140430071511) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], name: "index_rails_admin_histories", using: :btree
+
+  create_table "rich_rich_files", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "rich_file_file_name"
+    t.string   "rich_file_content_type"
+    t.integer  "rich_file_file_size"
+    t.datetime "rich_file_updated_at"
+    t.string   "owner_type"
+    t.integer  "owner_id"
+    t.text     "uri_cache"
+    t.string   "simplified_type",        default: "file"
+  end
 
   create_table "speakers", force: true do |t|
     t.string   "firstname"

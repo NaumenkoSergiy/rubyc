@@ -1,4 +1,5 @@
 Rubyc2014::Application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   resources :posts
 
   devise_for :admins
