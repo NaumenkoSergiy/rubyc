@@ -9,13 +9,13 @@
       a.navbar-brand(href='/') RubyC 2014
     .navbar-collapse.collapse
       ul.nav.navbar-nav
-        li= link_to 'Overview', '#overview'
-        li= link_to 'Speakers', '#speakers'
-        li= link_to 'Tickets',  '#tickets'
-        li= link_to 'Venue',    '#venue'
-        li= link_to 'Hotels',   '#hotels'
-        li= link_to 'Agenda',   '#agenda'
-        li= link_to 'Sponsors', '#sponsors'
+        li= link_to 'Overview', root_path(anchor: 'overview')
+        li= link_to 'Speakers', root_path(anchor: 'speakers')
+        li= link_to 'Tickets',  root_path(anchor: 'tickets')
+        li= link_to 'Venue',    root_path(anchor: 'venue')
+        li= link_to 'Hotels',   root_path(anchor: 'hotels')
+        li= link_to 'Agenda',   root_path(anchor: 'agenda')
+        li= link_to 'Sponsors', root_path(anchor: 'sponsors')
       ul.nav.navbar-nav.navbar-right.social
         li: a(href='https://twitter.com/rubyc_eu'): i.fa.fa-2x.fa-twitter
         li: a(href='https://www.facebook.com/RubyC.eu'): i.fa.fa-2x.fa-facebook
