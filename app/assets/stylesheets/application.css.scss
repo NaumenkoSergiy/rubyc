@@ -308,64 +308,39 @@ section {
 }
 
 #agenda {
-  p.description {
-    @extend .text-center;
-    color: $gray-light;
-  }
-
-  .subject {
-    font-weight: bold;
-  }
-
-  .when,
-  .subject,
-  .speaker {
-    display: inline;
-    direction: ltr;
-  }
-
-  h3 {
-    font-size: 1.2em;
-    font-style: italic;
-    margin-top: 0px;
-    margin-bottom: 18px;
-  }
-
-  .session {
-    font-size: 0.9em;
-    margin-bottom: 15px;
-  }
-
-  .day1 {
-    h3 {
-      text-align: right
-    }
-    .session {
-      direction: rtl;
-
-      .when {
-        padding-left: 25px;
-        background: url(image-path('left.png')) no-repeat left center;
+  .agenda-listing {
+    display: table;
+    padding: 1em;
+    background: $gray-lighter;
+    
+    .item {
+      display: table-row;
+      
+      &.item-break {
+        color: $gray-light;
       }
-      .subject { margin: 0 15px }
-    }
-    border-right: 1px solid $gray-lighter;
-  }
 
-  .day2 {
-    h3 {
-      text-align: left;
-    }
-    .session {
-      direction: ltr;
-
-      .when {
-        padding-right: 25px;
-        background: url(image-path('right.png')) no-repeat right center;
+      &.item-closing {
+        background: $orange;
       }
-      .subject { margin: 0 15px }
+
+      &>* {
+        display: table-cell;
+      }
+      
+      .time  {
+        padding-right: 1em;
+      }
+
+      .speaker {
+        padding-right: 1em;
+        white-space: nowrap;
+      }
+
+      .title { font-weight: bold }
     }
   }
+
 }
 
 #venue {
