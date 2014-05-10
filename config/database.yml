@@ -4,6 +4,10 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 development: &default
+  adapter: sqlite3
+  database: 'db/development.sqlite3'
+
+pg: &postgresql
   adapter: postgresql
   encoding: unicode
   database: rubyc2014_development
@@ -17,7 +21,7 @@ test: &test
   database: rubyc2014_test
 
 production:
-  <<: *default
+  <<: *postgresql
   database: rubyc2014_production
 
 cucumber:
