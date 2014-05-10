@@ -35,7 +35,7 @@ class WelcomeController < ApplicationController
 			{ time: "16:15", speaker: "Konstantin Tennhard  ", title: "Large Scale Rails Applications" },
 			{ time: "17:00", title: "Break", class: 'item-break' },
 			{ time: "17:10", speaker: "Konstantin Tennhard  ", title: "ActionWidgets – View Components for Rails Applications" },
-			{ time: "19:00", speaker: "Till 21:30", title: "BOWLING in ТС Bolshevik", class: 'item-closing'}
+			{ time: "19:00", speaker: "Till 21:30", title: "BOWLING at \"Bolshevik\"", class: 'item-closing'}
 		]
   end
 end
