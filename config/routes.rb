@@ -1,11 +1,14 @@
 Rubyc2014::Application.routes.draw do
+  devise_for :visitors
+  devise_for :admins
   mount Ckeditor::Engine => '/ckeditor'
   resources :posts
-
-  devise_for :admins
+  
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+
+  get 'videos' => 'videos#index'
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
