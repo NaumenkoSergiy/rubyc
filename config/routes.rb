@@ -1,9 +1,9 @@
 Rubyc2014::Application.routes.draw do
-  devise_for :visitors
   devise_for :admins
+  devise_for :visitors
   mount Ckeditor::Engine => '/ckeditor'
   resources :posts
-  
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -312,10 +312,10 @@ section {
     display: table;
     padding: 1em;
     background: $gray-lighter;
-    
+
     .item {
       display: table-row;
-      
+
       &.item-break {
         color: $gray-light;
       }
@@ -327,7 +327,7 @@ section {
       &>* {
         display: table-cell;
       }
-      
+
       .time  {
         padding-right: 1em;
       }
